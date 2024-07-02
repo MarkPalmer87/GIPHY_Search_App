@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, sans-serif, Helvetica;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    width: 150px; /* Adjust the width of the logo image */
+    height: auto;
+    margin-right: 10px; /* Space between logo and text */
+}
+
+.logo span {
+    font-size: 28px; /* Adjust font size of the text */
+    color:#147575
+}
+
+#search-form {
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9); 
+    background-color: #147575; 
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+main {
+    padding: 20px;
+    width: 100%;
+    max-width: 95vw;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #21a1f1;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+    form {
+        flex-direction: column;
+    }
+
+    button {
+        margin-top: 10px;
+    }
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.pagination li {
+    margin: 0 5px; /*  spacing between pagination items */
+}
+
+.pagination li a {
+    border: 1px solid #ccc; /* Border for each navigation link */
+    border-radius: 5px; /* Optional: Rounded corners for links */
+}
+
+.pagination li.active a {
+    background-color: #21a1f1; /*  Background color of active page */
+    color: white;              /* Text color for active page */
+}
+
+.pagination li.disabled a {
+    pointer-events: none; /* Disables click events on disabled links */
+    opacity: 0.6; /* Slightly opaque to indicate it is disabled */
+}
